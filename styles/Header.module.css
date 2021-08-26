@@ -1,0 +1,43 @@
+
+.header {
+  /* background-color: var(--naranja); */
+  border-bottom: 2px solid green;
+  padding: 1rem 0;
+}
+
+.contenedorHeader{
+  max-width: 1200px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .contenedorHeader {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.contenedorHeader div{
+  display:flex;
+  align-items: center;
+}
+
+.main {
+  padding: 5rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #070505;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+  text-align: center;
+  color: #fff;
+}
+
