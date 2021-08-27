@@ -18,7 +18,7 @@ const Navegacion = () => {
                     
                 </span>
                 <Boton nombre="Inicio" ruta = "/" tipo = "botonNav"></Boton>
-                <Boton nombre="Votar" ruta = "/votar" ></Boton>
+                <Boton nombre="Votar" ruta = "/votar" tipo = "botonNav"></Boton>
                 </>
                 ) : (
                 <>
