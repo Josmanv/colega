@@ -1,7 +1,7 @@
 
 .header {
   /* background-color: var(--naranja); */
-  border-bottom: 2px solid green;
+  border-bottom: 2px solid var(--marron);
   padding: 1rem 0;
 }
 
@@ -39,5 +39,12 @@
   font-size: 4rem;
   text-align: center;
   color: #fff;
+}
+
+.logo {
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  transform: rotate(-21deg);
+  cursor: pointer;
 }
 

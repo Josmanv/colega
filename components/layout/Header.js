@@ -2,14 +2,18 @@ import React from 'react';
 import Navegacion from './Navegacion';
 import Link from 'next/link';
 import styles from '../../styles/Header.module.css';
-
+import Image from 'next/image';
+import Boton from '../ui/Boton';
 
 const Header = () => {
     return ( 
         <header className={styles.header}>
             <div className={styles.contenedorHeader}>
                 <div>
-                    <p>P</p>
+                    <span className={styles.logo}>
+                    <Link href="/"><Image src="/favicon.ico" alt="Beer" width={32} height={32} /></Link>
+                        
+                    </span>
                     {/* buscador aquí */}
                    <Navegacion>
                    
@@ -18,7 +22,11 @@ const Header = () => {
                 <div>
                 
                 <p>Hola Usuario</p>
-                <button type="button">Cerrar Sesión</button>
+                <Boton 
+                    nombre="Cerrar Sesión" 
+                    clase="botonMarron"
+                    >
+                </Boton>
                 <Link href="/">Login</Link>
                 </div>
             </div>
