@@ -1,4 +1,25 @@
-.boton{
-  background-color: var(--marron);
+.boton, .boton1{
+  background-color: #fff;
+  font-weight: 500;
+  text-transform:capitalize;
+  border:1px solid var(--gris2);
+  padding: .8rem 2rem;
+  margin-right: 1rem;;
+  transition: box-shadow 1s;
 }
+
+.boton:last-of-type{
+  margin-right: 0;
+}
+
+.boton:hover{
+  background: var(--grisSuave);
+  box-shadow: 0px 0px 5px 0px var(--gris2);
+}
+
+.boton1:hover{
+  background: var(--marron);
+  box-shadow: 0px 0px 5px 0px var(--gris2);
+}
+
 

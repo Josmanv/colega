@@ -1,0 +1,15 @@
+.h2{
+  text-decoration: underline;
+  margin-top: 2rem;
+}
+
+.logo {
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+.logo div {
+  transform: rotate(-21deg);
+  top: 6px;
+}

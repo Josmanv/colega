@@ -23,6 +23,10 @@
   align-items: center;
 }
 
+.contenedorHeader p{
+  margin-right: 2rem;
+}
+
 .main {
   padding: 5rem 0;
   flex: 1;
@@ -41,10 +45,5 @@
   color: #fff;
 }
 
-.logo {
-  margin-right: 0.5rem;
-  margin-left: 0.5rem;
-  transform: rotate(-21deg);
-  cursor: pointer;
-}
+
 
