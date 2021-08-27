@@ -2,7 +2,7 @@ import Layout from '../components/layout/Layout';
 import styles from '../styles/Layout.module.css';
 import Head from 'next/head';
 
-export default function Home() {
+export default function votar() {
     return (
         <div>
 
@@ -13,7 +13,7 @@ export default function Home() {
         </Head>
             
             <Layout>
-            <h1 className={styles.title}>Votar</h1>
+            <h2 className={styles.h2}>Votaciones al colega del año</h2>
             
             </Layout>
         </div>

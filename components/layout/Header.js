@@ -7,16 +7,12 @@ import Boton from '../ui/Boton';
 const Header = () => {
 
 
-    const usuario = true;
+    const usuario = false;
 
     return ( 
         <header className={styles.header}>
             <div className={styles.contenedorHeader}>
                 <div>
-                   <Navegacion></Navegacion>
-                </div>
-                <div>
-
                 {usuario ? (
                     <>
                     <p>Hola Usuario</p>
@@ -30,16 +26,16 @@ const Header = () => {
                 ) : (
                     <>
                     <Boton 
-                        nombre="Inicia Sesión"
-                        ruta = "/"
+                        nombre="Entra pa entro"
+                        ruta = "/login"
                         >
                     </Boton>
                     </>
                 )}
-                
-                
-                
                 </div>
+                <div>
+                <Navegacion></Navegacion>
+             </div>
             </div>
         </header>
      );

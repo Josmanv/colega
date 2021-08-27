@@ -7,9 +7,10 @@ const Layout = props => {
         <>
         <Header></Header>
         <main className={styles.main}>
-        <h1 className={styles.title}>Bienvenidos al día del colega 2021</h1>
+        <h1 className={styles.title}>Día del Colega 2021</h1>
             {props.children}  
         </main>
+        <footer className={styles.footer}>Día del &copy;olega 2021 - Nos reservamos todos los derechos </footer>
         </> 
         );
 }
