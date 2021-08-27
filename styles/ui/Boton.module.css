@@ -1,4 +1,4 @@
-.boton, .boton1{
+.boton{
   background-color: #fff;
   font-weight: 500;
   text-transform:capitalize;
@@ -17,9 +17,30 @@
   box-shadow: 0px 0px 5px 0px var(--gris2);
 }
 
-.boton1:hover{
-  background: var(--marron);
-  box-shadow: 0px 0px 5px 0px var(--gris2);
+.botonNav{
+  background-color: #fff;
+  font-weight: 500;
+  text-transform:capitalize;
+  border: 0px;
+  padding: .8rem 2rem;
+  margin-right: 1rem;;
+  position: relative;
+}
+
+.botonNav:after {
+  content: '';
+  display: block;
+  border-bottom: 3px solid var(--secundario);
+  width: 0;
+  position: absolute;
+  right: 0;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+  padding-bottom: 5px;
+}
+
+.botonNav:hover:after { 
+  width: 100%; 
 }
 
 

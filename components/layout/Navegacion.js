@@ -17,8 +17,8 @@ const Navegacion = () => {
                 <Link href="/"><Image src="/favicon.ico" alt="Beer" width={32} height={32} /></Link>
                     
                 </span>
-                <Boton nombre="Inicio" ruta = "/"></Boton>
-                <Boton nombre="Nosotros" ruta = "/nosotros"></Boton>
+                <Boton nombre="Inicio" ruta = "/" tipo = "botonNav"></Boton>
+                <Boton nombre="Votar" ruta = "/votar" tipo = "botonNav"></Boton>
                 </>
                 ) : (
                 <>

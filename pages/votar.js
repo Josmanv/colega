@@ -13,7 +13,7 @@ export default function Home() {
         </Head>
             
             <Layout>
-            <h1 className={styles.title}>nosotros</h1>
+            <h1 className={styles.title}>Votar</h1>
             
             </Layout>
         </div>
