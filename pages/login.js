@@ -1,4 +1,4 @@
-import Layout from '../components/layout/Layout';
+import LayoutLogin from '../components/layout/LayoutLogin';
 import styles from '../styles/Login.module.css';
 import Head from 'next/head';
 import useValidation from '../hooks/useValidation';
@@ -29,7 +29,7 @@ export default function login() {
             <link href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@400;500&display=swap" rel="stylesheet" />
         </Head>
             
-            <Layout>
+            <LayoutLogin>
             
             <form 
                 className={styles.formulario}
@@ -68,7 +68,7 @@ export default function login() {
                 </div>
             </form>
             
-            </Layout>
+            </LayoutLogin>
         </div>
         
         
