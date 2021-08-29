@@ -11,9 +11,10 @@ export default function login() {
         password: ""
     }
 
-    const { valores, error, submitForm, handelSubmit, handelChange} = useValidation(STATE_INICIAL, validarLogin, loguear);
+    const { valores, error, submitForm, saludo, handelSubmit, handelChange, handelBlur} = useValidation(STATE_INICIAL, validarLogin, loguear);
 
     const {usuario, password} = valores;
+
 
     function loguear(){
         console.log("logueando...");
@@ -42,8 +43,14 @@ export default function login() {
                         placeholder="Usuario" 
                         name="usuario" 
                         value={usuario} 
-                        onChange={handelChange} />
+                        onChange={handelChange}
+                        onBlur={handelBlur} />
                 </div>
+
+                {error.usuario && <p className={styles.error}>{error.usuario}</p>}
+                {saludo.saludar && <p className={styles.error}>{saludo.saludar}</p>}
+
+
                 <div>
                     <label htmlFor="password">Santo y seña</label>
                     <input 
@@ -54,6 +61,8 @@ export default function login() {
                         value={password} 
                         onChange={handelChange} />
                 </div>    
+
+                {error.password && <p className={styles.error}>{error.password}</p>}
                 <div>
                     <input type="submit" value="Llamoalguien?" />
                 </div>

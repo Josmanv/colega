@@ -5,17 +5,17 @@ export default function useValidation(stateInicial, validar, fn) {
     const [valores, guardarValores] = useState(stateInicial);
     const [error, guardarError] = useState({});
     const [submitForm, guardarSubmitForm] = useState(false);
+    const [saludo, guardarSaludo] = useState({});
 
     useEffect(()=>{
         if(submitForm){
             const noErrores = Object.keys(error).length === 0;
             if(noErrores){
-               
                 fn(); // Fn = a la función que se jecuta en el componente
             }
             guardarSubmitForm(false);
         }
-    }, [submitForm, error]);
+    }, [error]);
 
     // Función que se ejecuta conforme el usuario escribe algo
     const handelChange = e =>{
@@ -29,15 +29,23 @@ export default function useValidation(stateInicial, validar, fn) {
     const handelSubmit = e =>{
         e.preventDefault();
         const erroresValidacion = validar(valores);
-        guardarError(erroresValidacion);
+        guardarError(erroresValidacion.errores);
         guardarSubmitForm(true);
+    }
+
+    const handelBlur = () => {
+        const reconocidos = validar(valores);
+        guardarSaludo(reconocidos.saludo);
+        guardarError(reconocidos.errores);
     }
 
     return {
         valores,
         error,
         submitForm,
+        saludo,
         handelSubmit,
-        handelChange
+        handelChange,
+        handelBlur
     };
 }
