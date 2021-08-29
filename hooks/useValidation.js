@@ -36,13 +36,12 @@ export default function useValidation(stateInicial, validar, fn) {
     const handelBlur = () => {
         const reconocidos = validar(valores);
         guardarSaludo(reconocidos.saludo);
-        guardarError(reconocidos.errores);
+        // guardarError(reconocidos.errores);
     }
 
     return {
         valores,
         error,
-        submitForm,
         saludo,
         handelSubmit,
         handelChange,

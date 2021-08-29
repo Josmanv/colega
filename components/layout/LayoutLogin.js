@@ -6,6 +6,7 @@ const LayoutLogin = props => {
     return ( 
         <>
         <Header></Header>
+        
         <main className={styles.main}>
         <h1 className={styles.title}>Día del Colega 2021</h1>
             {props.children}  

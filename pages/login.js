@@ -3,6 +3,7 @@ import styles from '../styles/Login.module.css';
 import Head from 'next/head';
 import useValidation from '../hooks/useValidation';
 import validarLogin from '../validacion/validarLogin';
+import firebase from '../firebase';
 
 export default function login() {
 
@@ -11,13 +12,14 @@ export default function login() {
         password: ""
     }
 
-    const { valores, error, submitForm, saludo, handelSubmit, handelChange, handelBlur} = useValidation(STATE_INICIAL, validarLogin, loguear);
+    const { valores, error, saludo, handelSubmit, handelChange, handelBlur} = useValidation(STATE_INICIAL, validarLogin, loguear);
 
     const {usuario, password} = valores;
 
 
     function loguear(){
         console.log("logueando...");
+        firebase.loguear(usuario, password);
     }
 
     return (
@@ -48,7 +50,7 @@ export default function login() {
                 </div>
 
                 {error.usuario && <p className={styles.error}>{error.usuario}</p>}
-                {saludo.saludar && <p className={styles.error}>{saludo.saludar}</p>}
+                {saludo.saludar && <p className={styles.saludo}>{saludo.saludar}</p>}
 
 
                 <div>

@@ -40,3 +40,12 @@
   border: 1px solid #fff;
   font-weight: 500;
 }
+
+.saludo{
+  color: #fff;
+  background:  #3d4025;
+  padding: 2rem;
+  box-shadow: 0px 0px 3px 2px #000 inset;
+  border: 1px solid #fff;
+  font-weight: 500;
+}
