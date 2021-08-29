@@ -28,3 +28,9 @@
   background-color: var(--secundario);
 }
 
+.formulario div input[type="submit"]:hover{
+  background-color: #d6afaf;
+}
+
+
+

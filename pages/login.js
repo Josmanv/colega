@@ -1,8 +1,24 @@
 import Layout from '../components/layout/Layout';
 import styles from '../styles/Login.module.css';
 import Head from 'next/head';
+import useValidation from '../hooks/useValidation';
+import validarLogin from '../validacion/validarLogin';
 
 export default function login() {
+
+    const STATE_INICIAL = {
+        usuario: "",
+        password: ""
+    }
+
+    const { valores, error, submitForm, handelSubmit, handelChange} = useValidation(STATE_INICIAL, validarLogin, loguear);
+
+    const {usuario, password} = valores;
+
+    function loguear(){
+        console.log("logueando...");
+    }
+
     return (
         <div>
 
@@ -14,14 +30,29 @@ export default function login() {
             
             <Layout>
             
-            <form className={styles.formulario}>
+            <form 
+                className={styles.formulario}
+                onSubmit={handelSubmit}
+                >
                 <div>
                     <label htmlFor="usuario">Usuario</label>
-                    <input type="text" id="usuario" placeholder="Usuario" name="usuario" />
+                    <input 
+                        type="text" 
+                        id="usuario" 
+                        placeholder="Usuario" 
+                        name="usuario" 
+                        value={usuario} 
+                        onChange={handelChange} />
                 </div>
                 <div>
                     <label htmlFor="password">Santo y seña</label>
-                    <input type="password" id="password" placeholder="password" name="password" />
+                    <input 
+                        type="password" 
+                        id="password" 
+                        placeholder="password" 
+                        name="password" 
+                        value={password} 
+                        onChange={handelChange} />
                 </div>    
                 <div>
                     <input type="submit" value="Llamoalguien?" />
