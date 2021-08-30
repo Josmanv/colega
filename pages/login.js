@@ -19,7 +19,8 @@ export default function login() {
 
     async function loguear(){
         try {
-            await firebase.login(usuario, password);
+           const llamada = await firebase.login(usuario, password);
+            console.log(llamada);
         } catch (error) {
             console.error("hubo un error al loguear el usuario", error.message)
         }
@@ -45,7 +46,7 @@ export default function login() {
                     <input 
                         type="text" 
                         id="usuario" 
-                        placeholder="Usuario" 
+                        placeholder="Email del Colega" 
                         name="usuario" 
                         value={usuario} 
                         onChange={handelChange}
@@ -61,7 +62,7 @@ export default function login() {
                     <input 
                         type="password" 
                         id="password" 
-                        placeholder="password" 
+                        placeholder="Contraseña" 
                         name="password" 
                         value={password} 
                         onChange={handelChange} />
