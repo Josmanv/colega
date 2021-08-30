@@ -17,9 +17,12 @@ export default function login() {
     const {usuario, password} = valores;
 
 
-    function loguear(){
-        console.log("logueando...");
-        firebase.loguear(usuario, password);
+    async function loguear(){
+        try {
+            await firebase.login(usuario, password);
+        } catch (error) {
+            console.error("hubo un error al loguear el usuario", error.message)
+        }
     }
 
     return (
