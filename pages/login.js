@@ -19,8 +19,7 @@ export default function login() {
 
     async function loguear(){
         try {
-           const llamada = await firebase.login(usuario, password);
-            console.log(llamada);
+           await firebase.login(usuario, password);
         } catch (error) {
             console.error("hubo un error al loguear el usuario", error.message)
         }
@@ -30,7 +29,7 @@ export default function login() {
         <div>
 
         <Head>
-            <title>Logueate anda</title>
+            <title>Le estamos esperando, caballero</title>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
             <link href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@400;500&display=swap" rel="stylesheet" />
         </Head>
