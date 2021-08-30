@@ -8,58 +8,58 @@ export default function validarLogin(valores){
     }
 
     switch (valores.usuario.toLowerCase()) {
-        case "jose":
+        case "jose@colega.com":
             saludo.saludar = "Hombre Josete...";
             break;
-        case "miguel":
+        case "miguel@colega.com":
             saludo.saludar = "Miguelete Miguelete...";
             break;
-        case "peña":
+        case "peña@colega.com":
             saludo.saludar = "Venga pa dentro pillín";
             break;
-        case "hector":
+        case "hector@colega.com":
             saludo.saludar = "Ay Huerta!! Tú por aquí?";
             break;
-        case "bayona":
+        case "bayona@colega.com":
             saludo.saludar = "Venga Bayona, cierra la puerta al entrar";
             break;
-        case "ivan":
+        case "ivan@colega.com":
             saludo.saludar = "Estás seguro iván?";
             break;
-        case "oscar":
+        case "oscar@colega.com":
             saludo.saludar = "Acho pijo, si ya sabía yo que tú no podías faltar!";
             break;
-        case "alfaro":
+        case "alfaro@colega.com":
             saludo.saludar = "Venga Alfarete, deja un rato el fogón y dale un poco al porrón";
             break;
-        case "fidel":
+        case "fidel@colega.com":
             saludo.saludar = "Espero que te hayas dejado el mechero en casa";
             break;  
-        case "chapa":
+        case "chapa@colega.com":
             saludo.saludar = "Ahí tú! chapate ahí!";
             break; 
-        case "moti":
+        case "moti@colega.com":
             saludo.saludar = "Hombre, tú por aquí? entra pillín!";
             break;
-        case "juanmi":
+        case "juanmi@colega.com":
             saludo.saludar = "Hombre, tú por aquí? entra pillín!";
             break;
-        case "coci":
+        case "coci@colega.com":
             saludo.saludar = "Hombre, tú por aquí? pero te deja la novia?";
             break;
-        case "dani":
+        case "dani@colega.com":
             saludo.saludar = "Puto Dani...";
             break;
-        case "barbas":
+        case "barbas@colega.com":
             saludo.saludar = "Hombre, tú por aquí? entra pillín!";
             break;
-        case "tore":
+        case "tore@colega.com":
             saludo.saludar = "Y tú quién chorras eres?";
             break;
-        case "javi":
+        case "javi@colega.com":
             saludo.saludar = "Hombre, tú por aquí? entra pillín!";
             break;
-        case "fran":
+        case "fran@colega.com":
             saludo.saludar = "Hombre, tú por aquí? entra pillín!";
             break;
     

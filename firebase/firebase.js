@@ -22,12 +22,15 @@ class Firebase{
             // Signed in
             const user = userCredential.user;
             Router.push('/');
+            return user;
         })
         .catch((error) => {
             const errorCode = error.code;
-            console.log(errorCode);
-            const errorMessage = error.message;
-            console.log(errorMessage);
+            if(errorCode === "auth/invalid-email"){
+                alert ("Este email no está registrado");
+            }else if(errorCode === "auth/wrong-password"){
+                alert ("Esa contraseña no es, majete");
+            }
         });
     }
 }
