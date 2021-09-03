@@ -1,7 +1,7 @@
 import * as app from "firebase/app";
 import 'firebase/auth';
 import firebaseConfig from './config';
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import Router from "next/router";
 
 class Firebase{
@@ -15,7 +15,6 @@ class Firebase{
         .then((userCredential) => {
             // Signed in
             const user = userCredential.user;
-            // console.log(user);
             Router.push('/');
         })
         .catch((error) => {
@@ -25,6 +24,15 @@ class Firebase{
             }else if(errorCode === "auth/wrong-password"){
                 alert ("Esa contraseña no es, majete");
             }
+        });
+    }
+
+    // Cerrar sesión del usuario
+    async cerrarSesion(){
+        const auth = getAuth();
+        signOut(auth).then(() => {
+        }).catch((error) => {
+            console.log(error);
         });
     }
 }

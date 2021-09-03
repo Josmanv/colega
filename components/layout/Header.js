@@ -1,13 +1,18 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import Navegacion from './Navegacion';
 import styles from '../../styles/Header.module.css';
+import stylesBoton from '../../styles/ui/Boton.module.css';
 
 import Boton from '../ui/Boton';
+import { FirebaseContext } from '../../firebase';
 
 const Header = () => {
 
+    async function cerrarSesion(e){
+        await firebase.cerrarSesion();       
+    }
 
-    const usuario = false;
+    const {usuario, firebase} = useContext(FirebaseContext);
 
     return ( 
         <header className={styles.header}>
@@ -15,12 +20,14 @@ const Header = () => {
                 <div>
                 {usuario ? (
                     <>
-                    <p>Hola Usuario</p>
+                    <p>Hola {usuario.email}</p>
 
-                    <Boton 
-                        nombre="Cerrar Sesión" 
-                        >
-                    </Boton>
+                    <button 
+                    nombre="Cerrar Sesión" 
+                    className={stylesBoton.boton}
+                    onClick={cerrarSesion}>
+                    Cerrar sesión
+                   </button>
                     
                     </>
                 ) : (
