@@ -19,14 +19,24 @@ export default function Home() {
       </Head>
 
 
-      {usuario ? <CookieConsent
+      {usuario 
+        ? <CookieConsent
+        onAccept={() => {
+            alert("Cuanto te gustará... Pájaro!");
+        }}
+        enableDeclineButton
+        onDecline={() => {
+          alert("Que pasa? prefieres LSD???");
+        }}
         location="bottom"
         buttonText="Acepto el viaje"
+        declineButtonText="Pues va a ser que no!"
         cookieName="Cokeelega"
         style={{ background: "#0f1918" }}
-        buttonStyle={{ background: "#b33838", color: "#fff", fontSize: "16px" }}
+        buttonStyle={{ background: "#b33838", color: "#fff", fontSize: "1em" }}
         expires={150}
-        >Esta web no utiliza cookies, utiliza magic mushrooms que debes aceptar para continuar... </CookieConsent> : null}
+        >Esta web no utiliza cookies, <span style={{ fontSize: "1.3em", fontWeight: "500" }}> utiliza magic mushrooms </span> que debes aceptar para continuar... </CookieConsent> 
+        : null}
       
 
       <Layout></Layout>
