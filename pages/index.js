@@ -1,9 +1,13 @@
 import Head from 'next/head';
-// import Image from 'next/image'
-import styles from '../styles/Home.module.css';
+import CookieConsent, { Cookies } from "react-cookie-consent";
 import Layout from '../components/layout/Layout';
+import { FirebaseContext } from '../firebase';
+import {useContext} from 'react';
 
 export default function Home() {
+
+  const {usuario} = useContext(FirebaseContext);
+
   return (
     <div>
       <Head>
@@ -14,7 +18,17 @@ export default function Home() {
             <link href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@400;500&display=swap" rel="stylesheet" />
       </Head>
 
+
+      {usuario ? <CookieConsent
+        location="bottom"
+        buttonText="Acepto el viaje"
+        cookieName="Cokeelega"
+        style={{ background: "#0f1918" }}
+        buttonStyle={{ background: "#b33838", color: "#fff", fontSize: "16px" }}
+        expires={150}
+        >Esta web no utiliza cookies, utiliza magic mushrooms que debes aceptar para continuar... </CookieConsent> : null}
       
+
       <Layout></Layout>
     </div>
   )
