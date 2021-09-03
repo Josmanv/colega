@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function useValidation(stateInicial, validar, fn) {
 
@@ -36,7 +36,6 @@ export default function useValidation(stateInicial, validar, fn) {
     const handelBlur = () => {
         const reconocidos = validar(valores);
         guardarSaludo(reconocidos.saludo);
-        // guardarError(reconocidos.errores);
     }
 
     return {
